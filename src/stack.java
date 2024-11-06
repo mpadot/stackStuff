@@ -1,13 +1,14 @@
-public class stack {
+class Node{
+    int data;
+    Node next;
+    public Node(int data) {
+        this.data = data;
+    }
+}
+class stack {
     Node head;
     Node tail;
-    public class Node{
-        int data;
-        Node next;
-        public Node(int data) {
-            this.data = data;
-        }
-    }
+
     public void push(int data) {
         Node newNode = new Node(data);
         if(head ==null){
@@ -32,7 +33,9 @@ public class stack {
         Node current = head;
         while(current.next != null){
             System.out.print(current.data+" ");
+            current = current.next;
         }
+        System.out.println();
     }
 
 }
